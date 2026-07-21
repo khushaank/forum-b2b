@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,10 +9,12 @@
   <title>Lead Quest | B2B Industrial Solutions</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <main class="page-shell">
-    <a class="brand" href="https://forum-b2bindustrial.in/" aria-label="B2B Industrial Solutions home">
-      <img src="logo.webp" alt="B2B Industrial Solutions" class="brand-logo" onerror="this.hidden=true; this.nextElementSibling.hidden=false;" />
+    <a class="brand" href="https://b2bindustrial.in/" aria-label="B2B Industrial Solutions home">
+      <img src="logo.webp" alt="B2B Industrial Solutions" class="brand-logo"
+        onerror="this.hidden=true; this.nextElementSibling.hidden=false;" />
       <span class="brand-fallback" hidden>B2B Industrial Solutions</span>
     </a>
 
@@ -29,9 +32,10 @@
       </ol>
 
       <form id="leadForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
-        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+        <input type="hidden" name="access_key" value="37c7915d-f633-4c37-b45f-c670fe70ea2b" />
         <input type="hidden" name="subject" value="New B2B Industrial Solutions Forum Lead" />
         <input type="hidden" name="from_name" value="B2B Industrial Solutions Forum" />
+        <input type="hidden" name="redirect" value="https://b2bindustrial.in/success" />
         <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" />
 
         <fieldset class="quest-step is-active" data-step="1">
@@ -44,7 +48,8 @@
             </div>
             <div class="field">
               <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="name@company.com" required />
+              <input id="email" name="email" type="email" autocomplete="email" inputmode="email"
+                placeholder="name@company.com" required />
               <p class="field-error" data-error-for="email"></p>
             </div>
           </div>
@@ -55,12 +60,14 @@
           <div class="fields-grid">
             <div class="field">
               <label for="designation">Role</label>
-              <input id="designation" name="designation" type="text" autocomplete="organization-title" placeholder="Your role" required />
+              <input id="designation" name="designation" type="text" autocomplete="organization-title"
+                placeholder="Your role" required />
               <p class="field-error" data-error-for="designation"></p>
             </div>
             <div class="field">
               <label for="company">Company</label>
-              <input id="company" name="company" type="text" autocomplete="organization" placeholder="Company name" required />
+              <input id="company" name="company" type="text" autocomplete="organization" placeholder="Company name"
+                required />
               <p class="field-error" data-error-for="company"></p>
             </div>
           </div>
@@ -71,7 +78,8 @@
           <div class="fields-grid">
             <div class="field">
               <label for="phone">Contact number</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+91 98765 43210" required />
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+91 98765 43210"
+                required />
               <p class="field-error" data-error-for="phone"></p>
             </div>
             <div class="field field-full">
@@ -100,4 +108,5 @@
   </main>
   <script src="script.js"></script>
 </body>
+
 </html>
