@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0f4b38" />
   <meta name="description" content="B2B Industrial Solutions lead form" />
-  <title>Lead Quest | B2B Industrial Solutions</title>
+  <title>Connect with us | B2B Industrial Solutions</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -21,66 +21,57 @@
     <section class="quest-card" aria-labelledby="quest-title">
       <div class="quest-heading">
         <p class="eyebrow">B2B INDUSTRIAL SOLUTIONS</p>
-        <h1 id="quest-title">Lead Quest</h1>
-        <p>Complete the three checkpoints.</p>
+        <h1 id="quest-title">Connect with us</h1>
+        <p>Share your details to access the resource and stay connected with our team.</p>
       </div>
 
       <ol class="progress" aria-label="Form progress">
-        <li class="is-active"><span>1</span><b>Identity</b></li>
+        <li class="is-active"><span>1</span><b>Name</b></li>
         <li><span>2</span><b>Work</b></li>
         <li><span>3</span><b>Contact</b></li>
       </ol>
 
       <form id="leadForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
-        <input type="hidden" name="access_key" value="37c7915d-f633-4c37-b45f-c670fe70ea2b" />
-        <input type="hidden" name="subject" value="Contact Page Lead - B2B Industrial Solutions Forum" />
-        <input type="hidden" name="from_name" value="B2B Industrial Solutions Forum" />
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY" />
+        <input type="hidden" name="subject" value="New B2B Industrial Solutions Contact" />
+        <input type="hidden" name="from_name" value="B2B Industrial Solutions" />
         <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" />
 
-        <fieldset class="quest-step is-active" data-step="1">
-          <legend>Checkpoint 1</legend>
+        <fieldset>
           <div class="fields-grid">
             <div class="field">
               <label for="name">Name</label>
               <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
               <p class="field-error" data-error-for="name"></p>
             </div>
+
             <div class="field">
               <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" inputmode="email"
-                placeholder="name@company.com" required />
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="name@company.com"
+                required />
               <p class="field-error" data-error-for="email"></p>
             </div>
-          </div>
-        </fieldset>
 
-        <fieldset class="quest-step" data-step="2" hidden>
-          <legend>Checkpoint 2</legend>
-          <div class="fields-grid">
             <div class="field">
               <label for="designation">Role</label>
               <input id="designation" name="designation" type="text" autocomplete="organization-title"
                 placeholder="Your role" required />
               <p class="field-error" data-error-for="designation"></p>
             </div>
+
             <div class="field">
               <label for="company">Company</label>
               <input id="company" name="company" type="text" autocomplete="organization" placeholder="Company name"
                 required />
               <p class="field-error" data-error-for="company"></p>
             </div>
-          </div>
-        </fieldset>
 
-        <fieldset class="quest-step" data-step="3" hidden>
-          <legend>Checkpoint 3</legend>
-          <div class="fields-grid">
             <div class="field">
               <label for="phone">Contact number</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+91 98765 43210"
-                required />
+              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+91 98765 43210" required />
               <p class="field-error" data-error-for="phone"></p>
             </div>
+
             <div class="field field-full">
               <label for="message">Note <span>(optional)</span></label>
               <textarea id="message" name="message" rows="3" placeholder="Anything else?"></textarea>
@@ -89,12 +80,12 @@
         </fieldset>
 
         <div class="actions">
-          <button class="back-button" type="button" id="backButton" hidden>Back</button>
-          <button class="next-button" type="button" id="nextButton">Next checkpoint</button>
-          <button class="submit-button" type="submit" id="submitButton" hidden>
-            <span class="button-text">Submit</span><span class="button-loader" aria-hidden="true"></span>
+          <button class="submit-button" type="submit" id="submitButton">
+            <span class="button-text">Continue</span>
+            <span class="button-loader" aria-hidden="true"></span>
           </button>
         </div>
+
         <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
       </form>
     </section>
