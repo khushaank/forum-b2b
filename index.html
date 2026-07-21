@@ -33,9 +33,8 @@
 
       <form id="leadForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
         <input type="hidden" name="access_key" value="37c7915d-f633-4c37-b45f-c670fe70ea2b" />
-        <input type="hidden" name="subject" value="New B2B Industrial Solutions Forum Lead" />
+        <input type="hidden" name="subject" value="Contact Page Lead - B2B Industrial Solutions Forum" />
         <input type="hidden" name="from_name" value="B2B Industrial Solutions Forum" />
-        <input type="hidden" name="redirect" value="https://b2bindustrial.in/success" />
         <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" />
 
         <fieldset class="quest-step is-active" data-step="1">
@@ -83,7 +82,7 @@
               <p class="field-error" data-error-for="phone"></p>
             </div>
             <div class="field field-full">
-              <label for="message">Note <span>optional</span></label>
+              <label for="message">Note <span>(optional)</span></label>
               <textarea id="message" name="message" rows="3" placeholder="Anything else?"></textarea>
             </div>
           </div>
@@ -93,17 +92,11 @@
           <button class="back-button" type="button" id="backButton" hidden>Back</button>
           <button class="next-button" type="button" id="nextButton">Next checkpoint</button>
           <button class="submit-button" type="submit" id="submitButton" hidden>
-            <span class="button-text">Complete quest</span><span class="button-loader" aria-hidden="true"></span>
+            <span class="button-text">Submit</span><span class="button-loader" aria-hidden="true"></span>
           </button>
         </div>
         <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
       </form>
-
-      <section id="confirmation" class="confirmation" hidden aria-live="polite">
-        <span class="confirmation-icon" aria-hidden="true">✓</span>
-        <h2>Quest complete</h2>
-        <p>Your details have been received. We’ll be in touch soon.</p>
-      </section>
     </section>
   </main>
   <script src="script.js"></script>
