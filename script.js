@@ -4,6 +4,7 @@
   const form = document.getElementById("leadForm");
   const submitButton = document.getElementById("submitButton");
   const status = document.getElementById("formStatus");
+  form.noValidate = true;
 
   const showError = (field, message) => {
     field.setAttribute("aria-invalid", "true");
@@ -45,7 +46,8 @@
         valid = false;
       } else if (
         field.type === "tel" &&
-        field.value.replace(/\D/g, "").length < 8
+        (!/^[+\d\s().-]+$/.test(field.value) ||
+          !/^\d{8,15}$/.test(field.value.replace(/\D/g, "")))
       ) {
         showError(field, "Enter a valid contact number.");
         valid = false;
@@ -65,17 +67,27 @@
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
+    if (submitButton.disabled) return;
 
     if (!validateForm()) return;
 
+    if (form.elements.botcheck.checked) return;
+
     submitButton.disabled = true;
     submitButton.classList.add("is-loading");
-    status.textContent = "";
+    form.setAttribute("aria-busy", "true");
+    status.textContent = "Sending your enquiry…";
 
     try {
+      const data = new FormData(form);
+      for (const [name, value] of data) {
+        if (typeof value === "string") data.set(name, value.trim());
+      }
+
       const response = await fetch(form.action, {
         method: "POST",
-        body: new FormData(form),
+        body: data,
+        signal: AbortSignal.timeout(20000),
         headers: {
           Accept: "application/json"
         }
@@ -83,19 +95,19 @@
 
       const result = await response.json().catch(() => ({}));
 
-      if (!response.ok || result.success === false) {
-        throw new Error(
-          result.message || "Submission failed. Please try again."
-        );
+      if (!response.ok || result.success !== true) {
+        throw new Error("Submission failed. Your details are still here; please try again.");
       }
 
-      window.location.href = "https://b2bindustrial.in/success";
+      window.location.assign(form.elements.redirect.value);
     } catch (error) {
-      status.textContent =
-        error.message || "Submission failed. Please try again.";
+      status.textContent = error.name === "TimeoutError"
+        ? "The request timed out. Please try again shortly."
+        : "We couldn’t confirm your submission. Please check your connection and try again.";
     } finally {
       submitButton.disabled = false;
       submitButton.classList.remove("is-loading");
+      form.removeAttribute("aria-busy");
     }
   });
 })();

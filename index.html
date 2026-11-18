@@ -4,89 +4,156 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'sha256-YZ6R6KudCuVqspy+S6KvKwQVJW5340MAvwmxIzAUQBw='; style-src 'self'; img-src 'self'; connect-src 'self' https://api.web3forms.com; form-action https://api.web3forms.com https://b2bindustrial.in/success; object-src 'none'; base-uri 'none'" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="theme-color" content="#0f4b38" />
-  <meta name="description" content="B2B Industrial Solutions lead form" />
-  <title>Connect with us | B2B Industrial Solutions</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description"
+    content="Connect with B2B Industrial Solutions. Share your industrial requirements and contact details to discuss engineering and enterprise solutions with our team." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <title>Contact B2B Industrial Solutions | Connect with Our Team</title>
+  <link rel="canonical" href="https://connect.b2bindustrial.in/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:site_name" content="B2B Industrial Solutions" />
+  <meta property="og:title" content="Connect with B2B Industrial Solutions" />
+  <meta property="og:description"
+    content="Tell us about your industrial requirements. Connect with our team for engineering and enterprise solutions." />
+  <meta property="og:url" content="https://connect.b2bindustrial.in/" />
+  <meta property="og:image" content="https://connect.b2bindustrial.in/og-cover.jpg" />
+  <meta property="og:image:secure_url" content="https://connect.b2bindustrial.in/og-cover.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Connect with B2B Industrial Solutions - Engineering Enterprise Solutions" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Connect with B2B Industrial Solutions" />
+  <meta name="twitter:description"
+    content="Tell us about your industrial requirements. Connect with our team for engineering and enterprise solutions." />
+  <meta name="twitter:image" content="https://connect.b2bindustrial.in/og-cover.jpg" />
+  <meta name="twitter:image:alt" content="Connect with B2B Industrial Solutions - Engineering Enterprise Solutions" />
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
+  <link rel="manifest" href="/site.webmanifest?v=2" />
+  <link rel="stylesheet" href="/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://b2bindustrial.in/#organization",
+        "name": "B2B Industrial Solutions",
+        "url": "https://b2bindustrial.in/",
+        "logo": "https://connect.b2bindustrial.in/logo.webp"
+      },
+      {
+        "@type": "ContactPage",
+        "@id": "https://connect.b2bindustrial.in/#webpage",
+        "url": "https://connect.b2bindustrial.in/",
+        "name": "Contact B2B Industrial Solutions",
+        "description": "Connect with our team to discuss industrial requirements, engineering and enterprise solutions.",
+        "inLanguage": "en-IN",
+        "about": { "@id": "https://b2bindustrial.in/#organization" }
+      }
+    ]
+  }
+  </script>
+  <script src="/script.js" defer></script>
 </head>
 
 <body>
+  <a class="skip-link" href="#quest-title">Skip to contact form</a>
   <main class="page-shell">
     <a class="brand" href="https://b2bindustrial.in/" aria-label="B2B Industrial Solutions home">
-      <img src="logo.webp" alt="B2B Industrial Solutions" class="brand-logo"
-        onerror="this.hidden=true; this.nextElementSibling.hidden=false;" />
-      <span class="brand-fallback" hidden>B2B Industrial Solutions</span>
+      <img src="/logo.webp" alt="B2B Industrial Solutions" class="brand-logo" width="360" height="148"
+        fetchpriority="high" />
     </a>
 
     <section class="quest-card" aria-labelledby="quest-title">
       <div class="quest-heading">
-        <p class="eyebrow">B2B INDUSTRIAL SOLUTIONS</p>
         <h1 id="quest-title">Connect with us</h1>
-        <p>Share your details to access the resource and stay connected with our team.</p>
+        <p>Tell us about your industrial requirements. Our team can help you explore engineering and enterprise
+          solutions for your business.</p>
       </div>
 
-      <p>Share your details and continue.</p>
+      <p class="form-intro" id="formInstructions">Share your details below. All fields are required unless marked
+        optional.</p>
 
-      <form id="leadForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
-        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY" />
+      <form id="leadForm" action="https://api.web3forms.com/submit" method="POST" aria-describedby="formInstructions">
+        <input type="hidden" name="access_key" value="37c7915d-f633-4c37-b45f-c670fe70ea2b" />
+        <input type="hidden" name="Source page URL" value="https://connect.b2bindustrial.in/" />
+        <input type="hidden" name="redirect" value="https://b2bindustrial.in/success" />
         <input type="hidden" name="subject" value="New B2B Industrial Solutions Contact" />
         <input type="hidden" name="from_name" value="B2B Industrial Solutions" />
-        <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" />
+        <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
         <fieldset>
+          <legend class="visually-hidden">Your contact details</legend>
           <div class="fields-grid">
             <div class="field">
               <label for="name">Name</label>
-              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
-              <p class="field-error" data-error-for="name"></p>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" maxlength="100"
+                aria-describedby="name-error" required />
+              <p class="field-error" id="name-error" data-error-for="name"></p>
             </div>
 
             <div class="field">
               <label for="email">Email</label>
               <input id="email" name="email" type="email" autocomplete="email" placeholder="name@company.com"
-                required />
-              <p class="field-error" data-error-for="email"></p>
+                maxlength="254" aria-describedby="email-error" required />
+              <p class="field-error" id="email-error" data-error-for="email"></p>
             </div>
 
             <div class="field">
               <label for="designation">Role</label>
               <input id="designation" name="designation" type="text" autocomplete="organization-title"
-                placeholder="Your role" required />
-              <p class="field-error" data-error-for="designation"></p>
+                placeholder="Your role" maxlength="100" aria-describedby="designation-error" required />
+              <p class="field-error" id="designation-error" data-error-for="designation"></p>
             </div>
 
             <div class="field">
               <label for="company">Company</label>
               <input id="company" name="company" type="text" autocomplete="organization" placeholder="Company name"
-                required />
-              <p class="field-error" data-error-for="company"></p>
+                maxlength="150" aria-describedby="company-error" required />
+              <p class="field-error" id="company-error" data-error-for="company"></p>
             </div>
 
             <div class="field">
               <label for="phone">Contact number</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+91 98765 43210" required />
-              <p class="field-error" data-error-for="phone"></p>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+91 98765 43210" maxlength="30"
+                aria-describedby="phone-error" required />
+              <p class="field-error" id="phone-error" data-error-for="phone"></p>
             </div>
 
             <div class="field field-full">
               <label for="message">Note <span>(optional)</span></label>
-              <textarea id="message" name="message" rows="3" placeholder="Anything else?"></textarea>
+              <textarea id="message" name="message" rows="3" maxlength="5000"
+                placeholder="Tell us what you’re looking for"></textarea>
             </div>
           </div>
         </fieldset>
 
         <div class="actions">
           <button class="submit-button" type="submit" id="submitButton">
-            <span class="button-text">Continue</span>
+            <span class="button-text">Send enquiry</span>
             <span class="button-loader" aria-hidden="true"></span>
           </button>
         </div>
 
-        <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+        <p id="formStatus" class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+        <noscript>
+          <p>You can submit this form with JavaScript disabled. Your browser will validate the required fields.</p>
+        </noscript>
       </form>
     </section>
+    <footer class="site-footer">
+      <p>Engineering Enterprise Solutions</p>
+      <a href="https://b2bindustrial.in/">Visit B2B Industrial Solutions <span aria-hidden="true">↗</span></a>
+    </footer>
   </main>
-  <script src="script.js"></script>
 </body>
 
 </html>
